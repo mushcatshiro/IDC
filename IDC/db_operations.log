@@ -1,0 +1,221 @@
+2020-05-17 10:37:36,525:INFO:/home/shiro/djangoproject/IDC/datalabel/forms.py changed, reloading.
+2020-05-17 10:40:51,366:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-05-17 10:41:01,148:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-05-17 10:41:29,569:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 10:41:41,670:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-05-17 10:43:28,170:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 10:56:49,967:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:03:03,565:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:03:53,586:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:04:46,694:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:05:36,258:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-05-17 11:17:54,006:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:25:08,818:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:31:11,855:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:31:19,644:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:33:56,554:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-17 11:34:05,429:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 11:34:15,485:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-05-17 11:35:39,325:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 18:16:05,358:INFO:/home/shiro/djangoproject/IDC/datalabel/tasks.py changed, reloading.
+2020-05-17 18:17:53,726:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-17 18:18:37,072:WARNING:Not Found: /favicon.ico
+2020-05-17 18:20:31,133:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-17 18:23:44,699:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-17 18:23:47,987:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-17 18:25:28,704:WARNING:Not Found: /favicon.ico
+2020-05-17 18:31:03,665:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-05-19 16:57:21,889:WARNING:Not Found: /favicon.ico
+2020-05-20 21:15:43,736:WARNING:Not Found: /favicon.ico
+2020-05-20 21:20:02,153:ERROR:Internal Server Error: /datalabel/project/9/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 38, in projectDetail
+    return render(request, 'datalabel/projectdetail.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'getNextItem' not found. 'getNextItem' is not a valid view function or pattern name.
+2020-05-20 21:20:06,890:ERROR:Internal Server Error: /datalabel/project/9/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 38, in projectDetail
+    return render(request, 'datalabel/projectdetail.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'getNextItem' not found. 'getNextItem' is not a valid view function or pattern name.
+2020-05-20 21:20:07,128:WARNING:Not Found: /favicon.ico
+2020-05-20 21:20:11,146:ERROR:Internal Server Error: /datalabel/project/8/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 38, in projectDetail
+    return render(request, 'datalabel/projectdetail.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'getNextItem' not found. 'getNextItem' is not a valid view function or pattern name.
+2020-05-20 21:21:01,177:ERROR:Internal Server Error: /datalabel/project/9/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 38, in projectDetail
+    return render(request, 'datalabel/projectdetail.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'getNextItem' not found. 'getNextItem' is not a valid view function or pattern name.
+2020-05-20 21:24:16,813:ERROR:Internal Server Error: /datalabel/getNextItem/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 57, in getNextItem
+    return render(request, 'datalabel/labelitem.html', context)
+NameError: name 'context' is not defined

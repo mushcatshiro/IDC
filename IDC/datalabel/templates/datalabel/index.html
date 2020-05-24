@@ -1,0 +1,29 @@
+{% extends "datalabel/layout.html" %}
+
+
+{% block content %}
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 15%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Project Name</th>
+				<th scope="col" style="width: 55%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Project Description</th>
+				<th scope="col" style="width: 15%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Project Directory</th>
+				<th scope="col" style="width: 15%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Project Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for project in projects %}
+				<tr>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ project.projectName }}</td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ project.projectDesc }}</td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ project.projectRootDir }}</td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="{% url 'datalabel-project' project.id %}">{{ project.ready }}</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock content %}
+
+<!-- on click js -->

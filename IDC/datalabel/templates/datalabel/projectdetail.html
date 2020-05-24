@@ -1,0 +1,22 @@
+{% extends "datalabel/layout.html" %}
+
+
+{% block content %}
+
+	<div class="card" style="width: 36rem;">
+		<div class="card-body">
+			<h5 class="card-title">{{ detail.projectName }}</h5>
+			<h6 class="card-subtitle mb-2 text-muted">By {{ detail.author }}</h6>
+			<p class="card-text">{{ detail.projectDesc }}</p>
+			<ul>
+				<li class="card-text">Categories: {{ detail.categories }}</li>
+				<li class="card-text">Project Root Directory: {{ detail.projectRootDir }}</li>
+				<li class="card-text">Status: {{ detail.ready }}</li>				
+			</ul>
+
+			<a href="{% url 'datalabel-getNextItem' %}" class="btn btn-primary">Start Labeling!</a>
+			<a href="#" class="btn btn-primary">Start Sorting!</a>
+		</div>
+	</div>
+
+{% endblock content %}

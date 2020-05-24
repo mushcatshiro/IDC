@@ -1,0 +1,21 @@
+{% extends "datalabel/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+	<div class="row justify-content-md-center">
+		<div class="col-8">
+			<form method="POST">
+				{% csrf_token %}
+				{{ form|crispy }}
+				<div class="form-group">
+					<button class="btn btn-outline-info" type="submit">Submit request</button>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	
+
+{% endblock content %}
