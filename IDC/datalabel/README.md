@@ -29,14 +29,16 @@ celery django and celery flask should have some minor setup difference, please r
 # backlog
 
 - adding celery and redis -> done
-- ensure no two user is editing same entry/ collision
+- ensure no two user is editing same entry/ collision -> pending test
 	- add new column is editing
 	- if upon query change to True
 	- upon update change to False
-- complete getNextItem
-- add flash messages
-- sort task
+- ~~complete getNextItem~~
+- generate full table of project
+	- categorize button call api to check if its locked
+- ~~add flash messages~~ dont find it particularly useful
+- sort task -> pending test
 	- lock until all entries has a category
 - error handling
-- tasks stat tracking and handling
+- tasks status tracking and handling
 - build internal API for better organization
