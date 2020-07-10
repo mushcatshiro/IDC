@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import requestForm
 from .models import RequestModel
-from .tasks import prepareDataLabelProject
+from .tasks import prepareDataLabelProject, executeFileSorting
 from .dboperations import get_top_empty_row
 from django.contrib import messages
 # from django.http import HttpResponse
@@ -39,23 +39,22 @@ def projectDetail(request, id):
 
 
 # generate dynamic selection
-def getNextItem(request):
-    # get image
-    # labaled = False
-    # if get_top_empty_row is None:
-    #     messages.add_message(request, messages.INFO,
-    #                          'all data has been labeled')
-    #     labaled = True
-    # # add indicator variable to get labeled category
-    # context = {
-    #     'imageFullDir': 'some dir query'
-    # }
+def labelNextItem(request):
+    if get_top_empty_row:
 
-    # if labeled:
-    #     context['label'] = 'some queried label'
+        return render(request, 'datalabel/labelitem.html', context)
+    else:
+        # all labeled for reviewing purpose
+        return render(request, 'datalabel/viewitem.html', context)
+
 
     return render(request, 'datalabel/labelitem.html', context)
 
 
-def addToProcessQueue():
-    pass
+def labelCorrection(request, ):
+    return
+
+
+def addToProcessQueue(request, tableName):
+    tableName = tableName
+    executeFileSorting.delay(tableName=tableName)
