@@ -1,0 +1,27 @@
+{% extends "datalabel/layout.html" %}
+
+
+{% block content %}
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 15%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Image Full Directory</th>
+				<th scope="col" style="width: 55%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">File Name</th>
+				<th scope="col" style="width: 30%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Category</th>
+				<th scope="col" style="width: 30%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in qTable %}
+				<tr>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.fullDir }}</td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="{% url 'datalabel-labelItem' fname=item.fileName pname=projectName %}">{{ item.fileName }}</a></td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.category }}</td>
+					<td style="max-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.locked }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock content %}

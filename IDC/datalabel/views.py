@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from .forms import requestForm
 from .models import RequestModel
 from .tasks import prepareDataLabelProject, executeFileSorting
-from .dboperations import get_top_empty_row
+from .dboperations import get_table
 from django.contrib import messages
+from django.core.paginator import Paginator
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -38,6 +39,27 @@ def projectDetail(request, id):
     return render(request, 'datalabel/projectdetail.html', context)
 
 
+def labelingProject(request, projectName):
+    qTable, categoryList = get_table(tableName=projectName)
+    # pagination = Paginator(qTable, 50)
+
+    # not sure how it handles if page is not given
+    # pageNumber = request.GET.get('page') or 1
+    # pageObj = pagination.get_page(pageNumber)
+    # pageObj = pageObj.to_json
+
+    context = {
+        'qTable': qTable,
+        'projectName': projectName
+    }
+
+    return render(request, 'datalabel/labelingProject.html', context)
+
+
+def labelItem(request, pname, fname):
+    return render(request, 'done')
+
+"""
 # generate dynamic selection
 def labelNextItem(request):
     if get_top_empty_row:
@@ -53,6 +75,7 @@ def labelNextItem(request):
 
 def labelCorrection(request, ):
     return
+"""
 
 
 def addToProcessQueue(request, tableName):

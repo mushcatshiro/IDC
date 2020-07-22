@@ -14,7 +14,7 @@
 				<li class="card-text">Status: {{ detail.ready }}</li>				
 			</ul>
 
-			<a href="{% url 'datalabel-labelNextItem' %}" class="btn btn-primary">Start Labeling!</a>
+			<a href="{% url 'datalabel-labelingProject' detail.projectName %}" class="btn btn-primary">Start Labeling!</a>
 			<a href="#" class="btn btn-primary">Start Sorting!</a>
 		</div>
 	</div>

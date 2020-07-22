@@ -44,22 +44,24 @@ def update_status_ready(conn, name):
 
 
 @db_connector
-def get_top_empty_row(conn, tableName=None):
+def get_table(conn, tableName=None):
     cur = conn.cursor()
-    cur.execute(f"""SELECT * from {tableName}
-                    WHERE category = 'no cat' and locked = '' LIMIT 1""")
+    cur.execute(f"""SELECT * from {tableName}""")
 
-    nextItem = cur.fetchone()
+    # qtable = cur.fetchall()
+    qtable_cols = [col[0] for col in cur.description]
+
+    qtable = [dict(zip(qtable_cols, row)) for row in cur.fetchall()]
 
     # get category list
-    cur.execute(f"""SELECT categories from requestForm
-                    WHERE projectName = {tableName}""")
+    cur.execute(f"""SELECT categories from datalabel_requestmodel
+                    WHERE projectName='{tableName}'""")
     categoryList = cur.fetchone()
 
-    if nextItem is None or categoryList is None:
-        return None
+    if qtable is None or categoryList is None:
+        return None, None
     #check nextItem and nextItem[0] type
-    return nextItem[0], categoryList[0]
+    return qtable, categoryList[0]
 
 
 @db_connector
