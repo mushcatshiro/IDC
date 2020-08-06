@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import requestForm
 from .models import RequestModel
 from .tasks import prepareDataLabelProject, executeFileSorting
-from .dboperations import get_table
+from .dboperations import get_table, get_item,\
+    check_table_labeling_complete, update_category
 from django.contrib import messages
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -33,6 +34,7 @@ def projectRequestForm(request):
 
 def projectDetail(request, id):
     detail = RequestModel.objects.get(id=id)
+    # check sorting process, state tracking?
     context = {
         'detail': detail
     }
@@ -57,7 +59,27 @@ def labelingProject(request, projectName):
 
 
 def labelItem(request, pname, fname):
-    return render(request, 'done')
+    itemDetails, categoryList = get_item(tableName=pname, fileName=fname)
+    categoryList = categoryList.split(', ')
+    print(itemDetails)
+    context = {
+        'itemDetails': itemDetails,
+        'categoryList': categoryList,
+        'projectName': pname
+    }
+    return render(request, 'datalabel/labelItem.html', context)
+
+
+def updateCategory(request, pname, fname, catname):
+    # unlock
+    if update_category:
+        messages.success(request, 'updated category')
+        return redirect('datalabel-labelItem', projectName=pname)
+    else:
+        messages.error(request, 'category is not updated')
+        return redirect('datalabel-labelItem', pname=pname, fname=fname)
+
+
 
 """
 # generate dynamic selection
@@ -79,5 +101,8 @@ def labelCorrection(request, ):
 
 
 def addToProcessQueue(request, tableName):
-    tableName = tableName
-    executeFileSorting.delay(tableName=tableName)
+    if check_table_labeling_complete(projectName=tableName):
+        executeFileSorting.delay(tableName=tableName)
+        return render(request, 'done')
+    else:
+        return render(request, 'there is some items yet to be labaled')

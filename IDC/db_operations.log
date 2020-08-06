@@ -561,3 +561,915 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: done
 2020-07-22 23:15:41,188:WARNING:Not Found: /favicon.ico
+2020-08-03 21:32:16,088:WARNING:Not Found: /datalabel/labelingProject
+2020-08-03 21:32:16,377:WARNING:Not Found: /favicon.ico
+2020-08-03 21:32:30,845:ERROR:Database connection error
+2020-08-03 21:32:30,978:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 61, in labelItem
+    itemDetails, categoryList = get_item(tableName=pname, fileName=fname)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 15, in with_connection_
+    rv = func(conn, *args, **kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 71, in get_item
+    cur.execute(f"""SELECT * from {tableName} where """)
+sqlite3.OperationalError: incomplete input
+2020-08-03 21:33:50,850:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-08-03 21:34:20,641:ERROR:Database connection error
+2020-08-03 21:34:20,768:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 61, in labelItem
+    itemDetails, categoryList = get_item(tableName=pname, fileName=fname)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 15, in with_connection_
+    rv = func(conn, *args, **kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 86, in get_item
+    return itemDetails, categoryList[0]
+NameError: name 'itemDetails' is not defined
+2020-08-03 21:35:39,903:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-08-03 21:35:46,326:ERROR:Database connection error
+2020-08-03 21:35:46,410:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 61, in labelItem
+    itemDetails, categoryList = get_item(tableName=pname, fileName=fname)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 15, in with_connection_
+    rv = func(conn, *args, **kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 80, in get_item
+    if qtable is None or categoryList is None:
+NameError: name 'qtable' is not defined
+2020-08-03 21:36:01,116:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-08-03 21:36:08,886:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelingItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: datalabel/labelingItem.html
+2020-08-03 21:37:10,278:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/tumblr_p5ksmxNHAO1u9y0nmo1_500.jpg
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelingItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: datalabel/labelingItem.html
+2020-08-03 21:38:20,669:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-03 21:38:23,227:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/tumblr_p5ksmxNHAO1u9y0nmo1_500.jpg
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: datalabel/labelItem.html
+2020-08-03 21:38:38,332:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: datalabel/labelItem.html
+2020-08-03 21:39:01,052:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 527, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+2020-08-03 21:39:28,613:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 66, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'getNextItem' not found. 'getNextItem' is not a valid view function or pattern name.
+2020-08-03 21:39:28,741:WARNING:Not Found: /favicon.ico
+2020-08-03 21:40:01,838:WARNING:Not Found: /favicon.ico
+2020-08-03 21:42:06,711:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-03 21:42:10,356:WARNING:Not Found: /favicon.ico
+2020-08-03 21:42:29,601:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-03 21:46:06,505:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-08-03 21:46:12,553:ERROR:Database connection error
+2020-08-03 21:46:12,675:ERROR:Internal Server Error: /datalabel/labelItem/IDCtest/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 61, in labelItem
+    itemDetails, categoryList = get_item(tableName=pname, fileName=fname)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 15, in with_connection_
+    rv = func(conn, *args, **kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 75, in get_item
+    itemDetails = [dict(zip(itemDetails_cols, row)) for row in cur.fetchone()]
+  File "/home/shiro/djangoproject/IDC/datalabel/dboperations.py", line 75, in <listcomp>
+    itemDetails = [dict(zip(itemDetails_cols, row)) for row in cur.fetchone()]
+TypeError: zip argument #2 must support iteration
+2020-08-03 21:46:13,206:WARNING:Not Found: /favicon.ico
+2020-08-03 21:47:04,267:INFO:/home/shiro/djangoproject/IDC/datalabel/dboperations.py changed, reloading.
+2020-08-03 21:47:21,776:WARNING:Not Found: /home/shiro/test/Shinya_Kogami_3.webp
+2020-08-03 21:48:44,351:WARNING:Not Found: /home/shiro/test/index.jpeg
+2020-08-03 21:53:27,553:WARNING:Not Found: /home/shiro/test/tumblr_p5ksmxNHAO1u9y0nmo1_500.jpg
+2020-08-03 21:59:53,445:WARNING:Not Found: /home/shiro/test/tumblr_p5ksmxNHAO1u9y0nmo1_500.jpg
+2020-08-03 21:59:53,714:WARNING:Not Found: /favicon.ico
+2020-08-03 22:10:41,588:ERROR:Internal Server Error: /datalabel/projectRequestForm/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 26, in projectRequestForm
+    form.save()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/forms/models.py", line 459, in save
+    self.instance.save()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 746, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 784, in save_base
+    force_update, using, update_fields,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 887, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 926, in _do_insert
+    using=using, raw=raw,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/query.py", line 1204, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1391, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: database is locked
+2020-08-03 22:12:18,093:ERROR:Internal Server Error: /datalabel/projectRequestForm/
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 26, in projectRequestForm
+    form.save()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/forms/models.py", line 459, in save
+    self.instance.save()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 746, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 784, in save_base
+    force_update, using, update_fields,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 887, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/base.py", line 926, in _do_insert
+    using=using, raw=raw,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/query.py", line 1204, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1391, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: database is locked
+2020-08-03 22:28:07,223:WARNING:Not Found: /home/shiro/djangoproject/IDC/datalabel/static/test/Shinya_Kogami_3.webp
+2020-08-03 22:28:15,865:WARNING:Not Found: /home/shiro/djangoproject/IDC/datalabel/static/test/Shinya_Kogami_3.webp
+2020-08-03 22:34:51,565:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 527, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2020-08-03 22:34:52,040:WARNING:Not Found: /favicon.ico
+2020-08-03 22:38:33,310:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 527, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2020-08-03 22:38:33,602:WARNING:Not Found: /favicon.ico
+2020-08-03 22:39:52,126:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 478, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 496, in extend_nodelist
+    token, '%r must be the first tag in the template.' % node,
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends "datalabel/layout.html"> must be the first tag in the template.
+2020-08-03 22:39:52,616:WARNING:Not Found: /favicon.ico
+2020-08-03 22:40:08,531:WARNING:Not Found: /favicon.ico
+2020-08-03 22:40:40,135:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 657, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 717, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: add requires 2 arguments, 1 provided
+2020-08-03 22:40:40,828:WARNING:Not Found: /favicon.ico
+2020-08-03 22:42:07,794:WARNING:Not Found: /favicon.ico
+2020-08-03 22:42:47,008:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '{{' from '{{'
+2020-08-03 22:42:47,648:WARNING:Not Found: /favicon.ico
+2020-08-03 22:43:05,323:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '{{' from '{{'
+2020-08-03 22:43:05,782:WARNING:Not Found: /favicon.ico
+2020-08-03 22:43:20,419:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 68, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '{{' from '{{'
+2020-08-03 22:43:20,840:WARNING:Not Found: /favicon.ico
+2020-08-03 22:44:19,601:WARNING:Not Found: /favicon.ico
+2020-08-03 22:44:35,343:WARNING:Not Found: /datalabel/labelItem/test2/
+2020-08-03 22:44:48,008:WARNING:Not Found: /datalabel/labelItem/test2
+2020-08-04 22:28:15,994:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 69, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/templatetags/static.py", line 131, in handle_token
+    "'%s' takes at least one argument (path to file)" % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'static' takes at least one argument (path to file)
+2020-08-04 22:33:39,709:WARNING:Not Found: /favicon.ico
+2020-08-04 22:33:58,592:WARNING:Not Found: /favicon.ico
+2020-08-04 22:34:01,277:WARNING:Not Found: /favicon.ico
+2020-08-04 22:35:08,868:WARNING:Not Found: /favicon.ico
+2020-08-04 22:35:22,904:WARNING:Not Found: /favicon.ico
+2020-08-04 22:37:17,830:WARNING:Not Found: /favicon.ico
+2020-08-04 22:39:12,634:WARNING:Not Found: /favicon.ico
+2020-08-04 22:39:23,660:WARNING:Not Found: /favicon.ico
+2020-08-04 22:40:50,640:WARNING:Not Found: /favicon.ico
+2020-08-04 22:41:13,705:WARNING:Not Found: /favicon.ico
+2020-08-04 22:41:45,755:WARNING:Not Found: /favicon.ico
+2020-08-04 22:47:14,785:WARNING:Not Found: /favicon.ico
+2020-08-04 22:50:09,234:WARNING:Not Found: /favicon.ico
+2020-08-04 22:50:59,586:WARNING:Not Found: /favicon.ico
+2020-08-04 22:52:46,185:WARNING:Not Found: /favicon.ico
+2020-08-04 22:53:53,689:WARNING:Not Found: /favicon.ico
+2020-08-04 22:54:31,701:WARNING:Not Found: /favicon.ico
+2020-08-04 22:54:48,136:WARNING:Not Found: /favicon.ico
+2020-08-04 22:55:03,810:WARNING:Not Found: /favicon.ico
+2020-08-04 22:55:50,197:WARNING:Not Found: /favicon.ico
+2020-08-04 22:56:28,742:WARNING:Not Found: /favicon.ico
+2020-08-04 22:57:04,060:WARNING:Not Found: /favicon.ico
+2020-08-04 22:57:19,089:WARNING:Not Found: /favicon.ico
+2020-08-04 22:59:15,076:WARNING:Not Found: /favicon.ico
+2020-08-04 23:00:59,473:WARNING:Not Found: /favicon.ico
+2020-08-04 23:01:14,760:WARNING:Not Found: /favicon.ico
+2020-08-04 23:02:08,586:WARNING:Not Found: /favicon.ico
+2020-08-04 23:02:48,044:WARNING:Not Found: /favicon.ico
+2020-08-04 23:03:54,957:WARNING:Not Found: /favicon.ico
+2020-08-04 23:04:24,789:WARNING:Not Found: /favicon.ico
+2020-08-04 23:04:48,729:WARNING:Not Found: /favicon.ico
+2020-08-04 23:05:03,542:WARNING:Not Found: /favicon.ico
+2020-08-04 23:06:46,158:INFO:/home/shiro/djangoproject/IDC/datalabel/urls.py changed, reloading.
+2020-08-04 23:06:52,292:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-04 23:06:57,965:INFO:/home/shiro/djangoproject/IDC/datalabel/urls.py changed, reloading.
+2020-08-05 22:09:15,976:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-05 22:09:54,544:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-05 22:10:03,084:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-05 22:10:07,434:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-05 22:24:53,352:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 70, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'datalabel-updateCategory' with keyword arguments '{'fname': '', 'pname': '', 'catname': 'akane'}' not found. 1 pattern(s) tried: ['datalabel\\/updateCategory\\/(?P<pname>[^/]+)\\/(?P<fname>[^/]+)\\/(?P<catname>[^/]+)$']
+2020-08-05 22:26:06,937:WARNING:Not Found: /datalabel/labelItem/test2
+2020-08-05 22:26:25,359:ERROR:Internal Server Error: /datalabel/labelItem/test2/Shinya_Kogami_3.webp
+Traceback (most recent call last):
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/shiro/djangoproject/IDC/datalabel/views.py", line 70, in labelItem
+    return render(request, 'datalabel/labelItem.html', context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/shiro/djangoproject/lib/python3.6/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'datalabel-updateCategory' with keyword arguments '{'fname': '', 'pname': '', 'catname': 'akane'}' not found. 1 pattern(s) tried: ['datalabel\\/updateCategory\\/(?P<pname>[^/]+)\\/(?P<fname>[^/]+)\\/(?P<catname>[^/]+)$']
+2020-08-05 22:28:58,142:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.
+2020-08-05 22:29:03,892:WARNING:Not Found: /favicon.ico
+2020-08-05 22:29:54,002:WARNING:Not Found: /favicon.ico
+2020-08-05 22:34:10,749:INFO:/home/shiro/djangoproject/IDC/datalabel/views.py changed, reloading.

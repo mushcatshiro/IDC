@@ -60,8 +60,29 @@ def get_table(conn, tableName=None):
 
     if qtable is None or categoryList is None:
         return None, None
-    #check nextItem and nextItem[0] type
+    # check nextItem and nextItem[0] type
     return qtable, categoryList[0]
+
+
+@db_connector
+def get_item(conn, tableName=None, fileName=None):
+    cur = conn.cursor()
+    # lock row
+    cur.execute(f"""SELECT * from {tableName} where fileName='{fileName}'""")
+
+    itemDetails_cols = [col[0] for col in cur.description]
+
+    itemDetails = dict(zip(itemDetails_cols, cur.fetchone()))
+
+    # get category list
+    cur.execute(f"""SELECT categories from datalabel_requestmodel
+                    WHERE projectName='{tableName}'""")
+    categoryList = cur.fetchone()
+
+    if itemDetails is None or categoryList is None:
+        return None, None
+    #check nextItem and nextItem[0] type
+    return itemDetails, categoryList[0]
 
 
 @db_connector
@@ -73,7 +94,7 @@ def check_table_labeling_complete(conn, tableName=None):
     if 'no cat' in qResult['category']:
         return False
     else:
-        return qResult
+        return True
 
 
 @db_connector
@@ -91,4 +112,12 @@ def update_status_exported(conn, tableName):
     cur = conn.cursor()
     cur.execute(f"""UPDATE datalabel_requestmodel SET ready='exported'
                     WHERE projectName='{tableName}'""")
+    return True
+
+
+@db_connector
+def update_category(conn, tableName=None, fileName=None, catName=None):
+    cur = conn.cursor()
+    cur.execute(f"""UPDATE {tableName} SET category='{catName}'
+                    WHERE fileName='{fileName}'""")
     return True

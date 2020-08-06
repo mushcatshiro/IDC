@@ -1,0 +1,18 @@
+{% extends "datalabel/layout.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+	<img src="{% static projectName %}/{{ itemDetails.fileName }}" class="rounded mx-auto d-block">
+	<div class="container" style="text-align: center;">
+		<div class="btn-group m-3">
+			{% for cat in categoryList %}
+				<button class="btn btn-outline-primary"><a href="{% url 'datalabel-updateCategory' fname=itemDetails.fileName pname=projectName catname=cat %}">{{ cat }}</a></button>
+			{% endfor %}
+		</div>		
+	</div>
+
+
+{% endblock content %}
